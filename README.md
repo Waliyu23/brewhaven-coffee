@@ -22,7 +22,7 @@ A responsive website for an artisanal coffee shop featuring dark mode, interacti
 - PWA technologies
 
 ## Live Demo
-[View Live Demo](https://Waliyu23.github.io/brewhaven-coffee.git)
+[View Live Demo](https://Waliyu23.github.io/brewhaven-coffee/)
 
 ## Installation
 
