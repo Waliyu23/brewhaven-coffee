@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brew Haven - Premium Artisanal Coffee Shop">
+    <meta name="theme-color" content="#6f4e37">
+    <title>Brew Haven - Artisanal Coffee Experience</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/icons/icon-192x192.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dark-mode.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/coffee-hero.webp" as="image">
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="btn btn-sm position-fixed bottom-0 end-0 m-3 z-3" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.webp" alt="Brew Haven" height="40" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="#order" id="orderBtn">Order Online</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold text-white mb-4">Artisanal Coffee Experience</h1>
+                    <p class="lead text-white mb-4">Handcrafted with passion, served with love</p>
+                    <div class="d-flex gap-3">
+                        <a href="#menu" class="btn btn-primary btn-lg px-4 py-3">Explore Menu</a>
+                        <a href="#order" class="btn btn-outline-light btn-lg px-4 py-3">Order Now</a>
+                    </div>
+                    <div class="d-flex align-items-center mt-4 text-white">
+                        <div class="d-flex me-4">
+                            <i class="fas fa-star text-warning me-2"></i>
+                            <span>4.9 (1.2k Reviews)</span>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>Downtown Beanville</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="position-relative">
+                        <img src="images/about.jpg" alt="About Us" class="img-fluid rounded" loading="lazy">
+                        <div class="position-absolute top-0 start-0 bg-primary p-3 rounded text-white m-3">
+                            <h3 class="mb-0">Since 2010</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="text-primary fw-bold">OUR STORY</span>
+                    <h2 class="fw-bold mb-4">Crafting Coffee Experiences</h2>
+                    <p class="lead">Founded in 2010, Brew Haven has been serving the finest coffee in town with a commitment to quality and sustainability.</p>
+                    <p>We source our beans directly from ethical farmers around the world and roast them in-house to perfection. Our baristas are trained to bring out the best flavors in every cup.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-seedling text-primary me-3 fs-4"></i>
+                                <span>Ethically Sourced Beans</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-recycle text-primary me-3 fs-4"></i>
+                                <span>Sustainable Practices</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-award text-primary me-3 fs-4"></i>
+                                <span>Award Winning</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-heart text-primary me-3 fs-4"></i>
+                                <span>Community Focused</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary mt-4">Our Process <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Menu Section -->
+<section id="menu" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold">OUR SELECTION</span>
+            <h2 class="fw-bold mb-3">Coffee Menu</h2>
+            <p class="lead">Discover our handcrafted beverages</p>
+            
+            <!-- Menu Filter Buttons -->
+            <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+                <button class="btn btn-outline-primary active filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="hot">Hot Coffee</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="cold">Cold Coffee</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="specialty">Specialty Drinks</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="tea">Tea & More</button>
+            </div>
+        </div>
+        
+        <!-- Menu Items Grid -->
+        <div class="row g-4 menu-items">
+            <!-- Espresso -->
+            <div class="col-md-6 col-lg-4 col-xl-3 menu-item" data-category="hot" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <img src="images/coffee-1.avif" class="img-fluid w-100" alt="Espresso" loading="lazy">
+                        <span class="badge bg-primary position-absolute top-0 end-0 m-2">Hot</span>
+                        <div class="item-overlay d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary btn-sm add-to-cart">+ Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Espresso</h5>
+                            <span class="text-primary fw-bold">$3.50</span>
+                        </div>
+                        <p class="card-text text-muted small mb-3">A concentrated form of coffee served in small, strong shots.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning small me-1"></i>
+                                <span class="small">4.8 (120)</span>
+                            </div>
+                            <span class="small text-muted">30 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Iced Latte -->
+            <div class="col-md-6 col-lg-4 col-xl-3 menu-item" data-category="cold" data-aos="fade-up" data-aos-delay="50">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <img src="images/coffee-2.jpg" class="img-fluid w-100" alt="Iced Latte" loading="lazy">
+                        <span class="badge bg-info position-absolute top-0 end-0 m-2">Cold</span>
+                        <div class="item-overlay d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary btn-sm add-to-cart">+ Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Iced Latte</h5>
+                            <span class="text-primary fw-bold">$4.75</span>
+                        </div>
+                        <p class="card-text text-muted small mb-3">Espresso with chilled milk over ice, smooth and refreshing.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning small me-1"></i>
+                                <span class="small">4.6 (95)</span>
+                            </div>
+                            <span class="small text-muted">120 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Caramel Macchiato -->
+            <div class="col-md-6 col-lg-4 col-xl-3 menu-item" data-category="specialty" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <img src="images/coffee-3.jpg" class="img-fluid w-100" alt="Caramel Macchiato" loading="lazy">
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Specialty</span>
+                        <div class="item-overlay d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary btn-sm add-to-cart">+ Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Caramel Macchiato</h5>
+                            <span class="text-primary fw-bold">$5.25</span>
+                        </div>
+                        <p class="card-text text-muted small mb-3">Espresso with vanilla syrup, steamed milk and caramel drizzle.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning small me-1"></i>
+                                <span class="small">4.9 (210)</span>
+                            </div>
+                            <span class="small text-muted">250 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Matcha Latte -->
+            <div class="col-md-6 col-lg-4 col-xl-3 menu-item" data-category="tea" data-aos="fade-up" data-aos-delay="150">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-img-top position-relative overflow-hidden">
+                        <img src="images/tea-1.jpg" class="img-fluid w-100" alt="Matcha Latte" loading="lazy">
+                        <span class="badge bg-success position-absolute top-0 end-0 m-2">Tea</span>
+                        <div class="item-overlay d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary btn-sm add-to-cart">+ Add to Order</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Matcha Latte</h5>
+                            <span class="text-primary fw-bold">$4.95</span>
+                        </div>
+                        <p class="card-text text-muted small mb-3">Premium matcha green tea powder with steamed milk.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-star text-warning small me-1"></i>
+                                <span class="small">4.7 (85)</span>
+                            </div>
+                            <span class="small text-muted">180 cal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More menu items would go here -->
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-primary px-4 py-3">View Full Menu <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="p-4 rounded-3 h-100 bg-primary-dark">
+                        <i class="fas fa-leaf fa-3x mb-4"></i>
+                        <h3>Sustainable</h3>
+                        <p>We use compostable cups and ethically sourced ingredients</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 rounded-3 h-100 bg-primary-dark">
+                        <i class="fas fa-wifi fa-3x mb-4"></i>
+                        <h3>Free WiFi</h3>
+                        <p>High-speed internet for our remote workers and students</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 rounded-3 h-100 bg-primary-dark">
+                        <i class="fas fa-gift fa-3x mb-4"></i>
+                        <h3>Rewards</h3>
+                        <p>Join our loyalty program and earn free drinks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonials Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold">TESTIMONIALS</span>
+            <h2 class="fw-bold mb-3">What Our Customers Say</h2>
+            <p class="lead">Don't just take our word for it</p>
+        </div>
+        
+        <!-- Testimonials Carousel -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-primary" aria-current="true"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-primary"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-primary"></button>
+                    </div>
+                    
+                    <div class="carousel-inner">
+                        <!-- Testimonial 1 -->
+                        <div class="carousel-item active">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle mb-3" width="120" alt="Sarah Johnson" loading="lazy">
+                                            <h5 class="mb-1">Sarah Johnson</h5>
+                                            <p class="text-muted small">Regular Customer</p>
+                                            <div class="d-flex justify-content-center">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="position-relative">
+                                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 position-absolute top-0 start-0"></i>
+                                                <blockquote class="ps-5">
+                                                    <p class="lead mb-4">The best coffee in town! I come here every morning before work. The baristas know my order by heart and always make it perfect. The atmosphere is cozy and the WiFi is reliable when I need to get some work done.</p>
+                                                    <footer class="d-flex align-items-center">
+                                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                                        <span class="small">Verified Customer</span>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                                            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mb-3" width="120" alt="Michael Chen" loading="lazy">
+                                            <h5 class="mb-1">Michael Chen</h5>
+                                            <p class="text-muted small">Freelancer</p>
+                                            <div class="d-flex justify-content-center">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="position-relative">
+                                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 position-absolute top-0 start-0"></i>
+                                                <blockquote class="ps-5">
+                                                    <p class="lead mb-4">Amazing atmosphere and even better coffee. My favorite place to work remotely. The cold brew is perfectly smooth and the avocado toast is delicious. The staff is friendly and the music selection is always on point.</p>
+                                                    <footer class="d-flex align-items-center">
+                                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                                        <span class="small">Verified Customer</span>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4 p-md-5">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3" width="120" alt="Emily Rodriguez" loading="lazy">
+                                            <h5 class="mb-1">Emily Rodriguez</h5>
+                                            <p class="text-muted small">Coffee Enthusiast</p>
+                                            <div class="d-flex justify-content-center">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star-half-alt text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="position-relative">
+                                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 position-absolute top-0 start-0"></i>
+                                                <blockquote class="ps-5">
+                                                    <p class="lead mb-4">Their seasonal specials are always creative and delicious. I particularly love their pumpkin spice latte in the fall - it's not too sweet like other places. The owner is passionate about coffee and it shows in every cup.</p>
+                                                    <footer class="d-flex align-items-center">
+                                                        <i class="fas fa-check-circle text-primary me-2"></i>
+                                                        <span class="small">Verified Customer</span>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust Indicators -->
+        <div class="row mt-5 g-4 text-center">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="p-3 h-100">
+                    <i class="fas fa-medal fa-3x text-primary mb-3"></i>
+                    <h3 class="h4">Award Winning</h3>
+                    <p class="mb-0">Best Coffee Shop 2023 - Beanville Times</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-3 h-100">
+                    <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                    <h3 class="h4">500+ Happy Customers</h3>
+                    <p class="mb-0">4.9 average rating across platforms</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-3 h-100">
+                    <i class="fas fa-leaf fa-3x text-primary mb-3"></i>
+                    <h3 class="h4">Sustainable</h3>
+                    <p class="mb-0">Ethically sourced, environmentally friendly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Order Online Section -->
+    <section id="order" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="images/mobile-app2.jpg" alt="Order Online" class="img-fluid" loading="lazy">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="text-primary fw-bold">ORDER AHEAD</span>
+                    <h2 class="fw-bold mb-4">Skip the Line</h2>
+                    <p class="lead mb-4">Order your favorite drinks online and pick them up without waiting.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="btn btn-dark btn-lg px-4">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-apple fa-2x me-2"></i>
+                                <div class="text-start">
+                                    <span class="small d-block">Download on the</span>
+                                    <span class="fw-bold">App Store</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-dark btn-lg px-4">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-google-play fa-2x me-2"></i>
+                                <div class="text-start">
+                                    <span class="small d-block">Get it on</span>
+                                    <span class="fw-bold">Google Play</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <span class="text-primary fw-bold">CONTACT US</span>
+                    <h2 class="fw-bold mb-4">Visit Our Cafe</h2>
+                    <p class="lead">We'd love to see you at our location or hear from you online.</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Location</h4>
+                        <p>123 Coffee Street, Beanville, CA 90210</p>
+                        <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209132773!2d-73.9878436845938!3d40.75798597932695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzI4LjciTiA3M8KwNTknMTUuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" loading="lazy" class="border-0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control bg-dark text-white" id="name" required>
+                                <div class="invalid-feedback">
+                                    Please provide your name.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control bg-dark text-white" id="email" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control bg-dark text-white" id="subject" required>
+                                <div class="invalid-feedback">
+                                    Please provide a subject.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control bg-dark text-white" id="message" rows="4" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a message.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary px-4 py-3">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4">Join Our Newsletter</h2>
+                    <p class="lead mb-5">Subscribe to get updates on new flavors, special offers, and events.</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-dark btn-lg w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="images/logo.webp" alt="Brew Haven" height="40" class="mb-3" loading="lazy">
+                    <p class="mb-4">Crafting exceptional coffee experiences since 2010. Ethical sourcing, sustainable practices, and community focus.</p>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#menu" class="text-white text-decoration-none">Menu</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> 123 Coffee St, Beanville</li>
+                        <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> hello@brewhaven.com</li>
+                        <li class="mb-2"><i class="fas fa-clock text-primary me-2"></i> Mon-Fri: 6am-8pm</li>
+                        <li class="mb-2"><i class="fas fa-clock text-primary me-2"></i> Sat-Sun: 7am-9pm</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p class="mb-3">Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="button">Go</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Brew Haven Coffee Shop. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
